@@ -54,6 +54,13 @@ const About = () => {
             студент 2-го курсу, факультет комп'ютерних наук, група КН-210.
             Проживаю в Закарпатській області, місто Ужгород.
           </Desc>
+          <iframe
+            src="https://www.youtube.com/embed/lcxHlmaWJoU"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="video"
+          />{" "}
         </InfoContainer>
       </Wrapper>
       <Newsletter />
