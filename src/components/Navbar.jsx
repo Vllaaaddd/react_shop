@@ -2,6 +2,7 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import { Link } from "react-router-dom";
+import NavMenu from "./NavMenu";
 import {
   Center,
   Container,
@@ -35,22 +36,7 @@ const Navbar = () => {
         </Center>
         <Right>
           <MenuItem>
-            <Link to="about" style={{ textDecoration: "none", color: "black" }}>
-              About
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link
-              to="registration"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Registration
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="login" style={{ textDecoration: "none", color: "black" }}>
-              Login
-            </Link>
+            <NavMenu />
           </MenuItem>
 
           <MenuItem>
