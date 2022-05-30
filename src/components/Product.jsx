@@ -19,7 +19,7 @@ const Product = ({ item }) => {
         </Icon>
         <Icon>
           <Link to="product">
-            <SearchOutlined />
+            <SearchOutlined style={{ color: "black" }} />
           </Link>
         </Icon>
         <Icon>

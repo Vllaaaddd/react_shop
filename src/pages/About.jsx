@@ -1,10 +1,13 @@
 import { Add, Remove } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { Animation } from "../components/Animation";
 import Footer from "../components/Footer";
+import BasicModal from "../components/Modal";
 
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { Widget } from "../components/Widget";
 import { mobile } from "../responsive";
 const Container = styled.div``;
 
@@ -42,8 +45,17 @@ const Desc = styled.p`
 
 const Content = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 40px 0px;
+`;
+
+const Ani = styled.div`
+  border: 2px solid black;
+  font-size: 50px;
+  width: 16%;
+`;
+
+const Sub = styled.div`
+  margin-left: 65px;
 `;
 
 const About = () => {
@@ -58,6 +70,10 @@ const About = () => {
             студент 2-го курсу, факультет комп'ютерних наук, група КН-210.
             Проживаю в Закарпатській області, місто Ужгород.
           </Desc>
+          <Ani>
+            <Animation />
+          </Ani>
+
           <Content>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7789.76637580928!2d22.295807535562428!3d48.62259521867582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919ba0923b11f%3A0x88400f5d52df9321!2sUzhhorod%20%D0%A1astle%2C%20Museum%20of%20Regional%20History!5e0!3m2!1sen!2sua!4v1653840350729!5m2!1sen!2sua"
@@ -77,16 +93,18 @@ const About = () => {
             ></iframe>
             <iframe
               src="https://www.youtube.com/embed/lcxHlmaWJoU"
+              width="300"
+              height="204"
               frameBorder="0"
               allow="autoplay; encrypted-media"
               allowFullScreen
               title="video"
             />{" "}
-            <svg
+            {/* <svg
               width="500"
               height="400"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ transform: "scale(0.5)", padding: "0px", margin: "0px" }}
+              style={{ transform: "scale(0.4)", padding: "0px", margin: "0px" }}
             >
               <g>
                 <title>background</title>
@@ -145,8 +163,11 @@ const About = () => {
                   fill="black"
                 />
               </g>
-            </svg>
+            </svg> */}
           </Content>
+          <Sub>
+            <BasicModal></BasicModal>
+          </Sub>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
